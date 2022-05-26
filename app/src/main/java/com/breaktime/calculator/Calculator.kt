@@ -9,10 +9,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.breaktime.calculator.ui.theme.LightGray
+import com.breaktime.calculator.ui.theme.MediumGray
 import com.breaktime.calculator.ui.theme.Orange
 
 @Composable
@@ -50,16 +52,6 @@ fun Calculator(
                         .background(LightGray)
                         .aspectRatio(2f)
                         .weight(2f),
-                    onClick = {
-                        onAction(CalculatorActions.Clear)
-                    }
-                )
-                CalculatorButton(
-                    symbol = "Del",
-                    modifier = Modifier
-                        .background(LightGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
                     onClick = {
                         onAction(CalculatorActions.Clear)
                     }
@@ -257,4 +249,67 @@ fun Calculator(
             }
         }
     }
+}
+
+@Preview
+@Composable
+fun CalculatorPreview() {
+    Calculator(
+        state = CalculatorState(),
+        onAction = { },
+        buttonSpacing = 8.dp,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MediumGray)
+            .padding(16.dp)
+    )
+}
+
+@Preview
+@Composable
+fun CalculatorWithNumber1Preview() {
+    Calculator(
+        state = CalculatorState(number1 = "123"),
+        onAction = { },
+        buttonSpacing = 8.dp,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MediumGray)
+            .padding(16.dp)
+    )
+}
+
+@Preview
+@Composable
+fun CalculatorWithActionPreview() {
+    Calculator(
+        state = CalculatorState(
+            number1 = "123",
+            operation = CalculatorOperation.Add
+        ),
+        onAction = { },
+        buttonSpacing = 8.dp,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MediumGray)
+            .padding(16.dp)
+    )
+}
+
+@Preview
+@Composable
+fun CalculatorWithNumber2Preview() {
+    Calculator(
+        state = CalculatorState(
+            number1 = "123",
+            operation = CalculatorOperation.Add,
+            number2 = "123"
+        ),
+        onAction = { },
+        buttonSpacing = 8.dp,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(MediumGray)
+            .padding(16.dp)
+    )
 }
