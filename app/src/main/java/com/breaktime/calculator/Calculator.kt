@@ -81,36 +81,18 @@ fun Calculator(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
             ) {
-                CalculatorButton(
-                    symbol = "7",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(7))
-                    }
-                )
-                CalculatorButton(
-                    symbol = "8",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(8))
-                    }
-                )
-                CalculatorButton(
-                    symbol = "9",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(9))
-                    }
-                )
+                (7..9).forEach {
+                    CalculatorButton(
+                        symbol = it.toString(),
+                        modifier = Modifier
+                            .background(Color.DarkGray)
+                            .aspectRatio(1f)
+                            .weight(1f),
+                        onClick = {
+                            onAction(CalculatorActions.Number(it))
+                        }
+                    )
+                }
                 CalculatorButton(
                     symbol = "x",
                     modifier = Modifier
@@ -126,36 +108,18 @@ fun Calculator(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
             ) {
-                CalculatorButton(
-                    symbol = "4",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(4))
-                    }
-                )
-                CalculatorButton(
-                    symbol = "5",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(5))
-                    }
-                )
-                CalculatorButton(
-                    symbol = "6",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(6))
-                    }
-                )
+                (4..6).forEach {
+                    CalculatorButton(
+                        symbol = it.toString(),
+                        modifier = Modifier
+                            .background(Color.DarkGray)
+                            .aspectRatio(1f)
+                            .weight(1f),
+                        onClick = {
+                            onAction(CalculatorActions.Number(it))
+                        }
+                    )
+                }
                 CalculatorButton(
                     symbol = "-",
                     modifier = Modifier
@@ -171,36 +135,18 @@ fun Calculator(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(buttonSpacing)
             ) {
-                CalculatorButton(
-                    symbol = "1",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(1))
-                    }
-                )
-                CalculatorButton(
-                    symbol = "2",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(2))
-                    }
-                )
-                CalculatorButton(
-                    symbol = "3",
-                    modifier = Modifier
-                        .background(Color.DarkGray)
-                        .aspectRatio(1f)
-                        .weight(1f),
-                    onClick = {
-                        onAction(CalculatorActions.Number(3))
-                    }
-                )
+                (1..3).forEach {
+                    CalculatorButton(
+                        symbol = it.toString(),
+                        modifier = Modifier
+                            .background(Color.DarkGray)
+                            .aspectRatio(1f)
+                            .weight(1f),
+                        onClick = {
+                            onAction(CalculatorActions.Number(it))
+                        }
+                    )
+                }
                 CalculatorButton(
                     symbol = "+",
                     modifier = Modifier
