@@ -38,9 +38,9 @@ class CalculatorViewModel : ViewModel() {
         if (number1 != null && number2 != null) {
             val result = when (state.operation) {
                 CalculatorOperation.Add -> number1 + number2
-                CalculatorOperation.Divide -> number1 - number2
+                CalculatorOperation.Subtract -> number1 - number2
                 CalculatorOperation.Multiply -> number1 * number2
-                CalculatorOperation.Subtract -> number1 / number2
+                CalculatorOperation.Divide -> number1 / number2
                 null -> return
             }
             state = state.copy(
