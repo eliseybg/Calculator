@@ -3,6 +3,7 @@ package com.breaktime.calculator
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -36,10 +37,11 @@ fun Calculator(
                 textAlign = TextAlign.End,
                 modifier = Modifier
                     .fillMaxWidth()
+                    .weight(1f)
                     .padding(vertical = 32.dp),
                 fontWeight = FontWeight.Light,
                 fontSize = 80.sp,
-                color = Color.White,
+                color = MaterialTheme.colorScheme.onBackground,
                 maxLines = 2
             )
             Row(
@@ -49,7 +51,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = "AC",
                     modifier = Modifier
-                        .background(LightGray)
+                        .background(MaterialTheme.colorScheme.tertiary)
                         .aspectRatio(2f)
                         .weight(2f),
                     onClick = {
@@ -59,7 +61,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = "Del",
                     modifier = Modifier
-                        .background(LightGray)
+                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.8f))
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
@@ -69,7 +71,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = "/",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.8f))
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
@@ -85,7 +87,7 @@ fun Calculator(
                     CalculatorButton(
                         symbol = it.toString(),
                         modifier = Modifier
-                            .background(Color.DarkGray)
+                            .background(MaterialTheme.colorScheme.secondary)
                             .aspectRatio(1f)
                             .weight(1f),
                         onClick = {
@@ -96,7 +98,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = "x",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.8f))
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
@@ -112,7 +114,7 @@ fun Calculator(
                     CalculatorButton(
                         symbol = it.toString(),
                         modifier = Modifier
-                            .background(Color.DarkGray)
+                            .background(MaterialTheme.colorScheme.secondary)
                             .aspectRatio(1f)
                             .weight(1f),
                         onClick = {
@@ -123,7 +125,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = "-",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.8f))
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
@@ -139,7 +141,7 @@ fun Calculator(
                     CalculatorButton(
                         symbol = it.toString(),
                         modifier = Modifier
-                            .background(Color.DarkGray)
+                            .background(MaterialTheme.colorScheme.secondary)
                             .aspectRatio(1f)
                             .weight(1f),
                         onClick = {
@@ -150,7 +152,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = "+",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.8f))
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
@@ -165,7 +167,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = "0",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(MaterialTheme.colorScheme.secondary)
                         .aspectRatio(2f)
                         .weight(2f),
                     onClick = {
@@ -175,7 +177,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = ".",
                     modifier = Modifier
-                        .background(Color.DarkGray)
+                        .background(MaterialTheme.colorScheme.secondary)
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
@@ -185,7 +187,7 @@ fun Calculator(
                 CalculatorButton(
                     symbol = "=",
                     modifier = Modifier
-                        .background(Orange)
+                        .background(MaterialTheme.colorScheme.primary)
                         .aspectRatio(1f)
                         .weight(1f),
                     onClick = {
@@ -206,7 +208,7 @@ fun CalculatorPreview() {
         buttonSpacing = 8.dp,
         modifier = Modifier
             .fillMaxWidth()
-            .background(MediumGray)
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     )
 }
@@ -220,7 +222,7 @@ fun CalculatorWithNumber1Preview() {
         buttonSpacing = 8.dp,
         modifier = Modifier
             .fillMaxWidth()
-            .background(MediumGray)
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     )
 }
@@ -237,7 +239,7 @@ fun CalculatorWithActionPreview() {
         buttonSpacing = 8.dp,
         modifier = Modifier
             .fillMaxWidth()
-            .background(MediumGray)
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     )
 }
@@ -255,7 +257,7 @@ fun CalculatorWithNumber2Preview() {
         buttonSpacing = 8.dp,
         modifier = Modifier
             .fillMaxWidth()
-            .background(MediumGray)
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     )
 }

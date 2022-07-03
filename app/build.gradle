@@ -61,4 +61,5 @@ dependencies {
 
     // Compose dependencies
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.4.1"
+    implementation "androidx.compose.material3:material3:1.0.0-alpha14"
 }
